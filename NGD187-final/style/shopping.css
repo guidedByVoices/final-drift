@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: rgb(219, 219, 5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive Navigation Bar */
+/* Responsive Navigation Bar */
+
+.mobile-device {
+  position: relative;
+  font-size: 1em;
+  text-align: center;
+  color: #333;
+}
+
+@media all and (max-width: 700px) {
+  .mobile-device {
+    color: RED;
+    font-size: 1em;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: rgb(233, 230, 45);
+  border: 2px solid black;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5;
+  background: none;
+}
+
+.brand-title img {
+  max-width: 40%;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(233, 230, 45);
+  padding: 0.5rem;
+  display: block;
+  transition: all 0.2s linear;
+  /* font-size: 1rem; */
+}
+
+.navbar-links li:hover {
+  /* background-color: #555; */
+  color: orangered;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(233, 230, 45);
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+/* Photo Carousel CSS */
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba (0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+/* footer */
+/* footer */
+/* footer */
+.container .shop {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 1rem 1rem;
+}
+
+.grid-5 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.center img {
+  max-width: 75%;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bg-light {
+  background: #333;
+  /* color: #333; */
+}
+
+.bg-dark {
+  background: #333;
+  color: white;
+}
+
+footer {
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Small Screens */
+@media (max-width: 560px) {
+  .showcase::after {
+    height: 50vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .content .logo {
+    height: 140px;
+    width: 140px;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+  .grid-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .services div {
+    border-bottom: #333;
+    padding: 1.2rem 1 rem;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 500px) {
+  .content .title,
+  .content .text {
+    display: none;
+  }
+
+  .content {
+    top: top 0;
+  }
+}
+
+div i:hover {
+  transition: 350ms;
+  border: 2px hidden yellow;
+  padding: 4px;
+  border-radius: 15%;
+  color: lightgreen;
+}

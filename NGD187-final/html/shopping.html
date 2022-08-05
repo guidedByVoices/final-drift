@@ -1,0 +1,230 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style/shopping.css" />
+    <script src="../script/photojs.js" defer></script>
+    <title>Shopping</title>
+  </head>
+
+  <body>
+    <!-- Responsive Navigation Bar -->
+    <!-- Responsive Navigation Bar -->
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar">
+      <div class="brand-title">
+        <a href="../index.html">
+          <img src="../images/logo.jpg" alt="NGD 187" />
+        </a>
+      </div>
+
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../html/photo.html">Photo</a></li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100000398466456"
+              target="blank"
+              ><i class="fab fa-facebook fa-2x"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/Niallo17" target="blank">
+              <i class="fab fa-youtube fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/niallgoesdrifting"
+              target="blank"
+            >
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+          </li>
+          <!-- <li><a href="#">Merch</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <!-- Responsive Navigation Bar End -->
+    <!-- Responsive Navigation Bar End -->
+    <!-- picture element -->
+    <!-- Photo Carousel -->
+    <section aria-label="Shop Photos">
+      <div class="carousel" data-carousel>
+        <!-- <div class="carousel-button"> -->
+        <button class="carousel-button prev" data-carousel-button="prev">
+          &#8656;
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          &#8658;
+        </button>
+        <!-- </div> -->
+        <ul data-slides>
+          <li class="slide" data-active>
+            <img src="../images/Apparel/hoodie_front.jpg" alt="Hoodie Front" />
+          </li>
+          <li class="slide">
+            <img src="../images/Apparel/hoodie_back.jpg" alt="Hoodie Back" />
+          </li>
+          <li class="slide">
+            <img src="../images/Apparel/tshirt_front.jpg" alt="T-Shirt Front" />
+          </li>
+          <li class="slide">
+            <img src="../images/Apparel/tshirt_back.jpg" alt="T-Shirt Back" />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Photo Carousel End -->
+
+    <!-- Order form -->
+    <section class="payPalOrder">
+      <form
+        class="payPalButton"
+        target="paypal"
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+      >
+        <input type="hidden" name="cmd" value="_cart" />
+        <input type="hidden" name="business" value="Niall.gerety@icloud.com" />
+        <input type="hidden" name="lc" value="IE" />
+        <input type="hidden" name="item_name" value="NGD Hoodies" />
+        <input type="hidden" name="button_subtype" value="products" />
+        <input type="hidden" name="no_note" value="0" />
+        <input type="hidden" name="currency_code" value="EUR" />
+        <input type="hidden" name="shipping" value="12.00" />
+        <input type="hidden" name="add" value="1" />
+        <input
+          type="hidden"
+          name="bn"
+          value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest"
+        />
+        <table>
+          <tr>
+            <td>
+              <input
+                type="hidden"
+                name="on0"
+                value="Hoodies + T-Shirts"
+              />Hoodies + T-Shirts
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name="os0">
+                <option value="Small Hoodie">Small Hoodie €40.00 EUR</option>
+                <option value="Medium Hoodie">Medium Hoodie €40.00 EUR</option>
+                <option value="Large Hoodie">Large Hoodie €40.00 EUR</option>
+                <option value="XL Hoodie">XL Hoodie €40.00 EUR</option>
+                <option value="Small T-Shirt">Small T-Shirt €20.00 EUR</option>
+                <option value="Medium T-Shirt">
+                  Medium T-Shirt €20.00 EUR
+                </option>
+                <option value="Large T-Shirt">Large T-Shirt €20.00 EUR</option>
+                <option value="XL T-Shirt">XL T-Shirt €20.00 EUR</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <input type="hidden" name="option_select0" value="Small Hoodie" />
+        <input type="hidden" name="option_amount0" value="40.00" />
+        <input type="hidden" name="option_select1" value="Medium Hoodie" />
+        <input type="hidden" name="option_amount1" value="40.00" />
+        <input type="hidden" name="option_select2" value="Large Hoodie" />
+        <input type="hidden" name="option_amount2" value="40.00" />
+        <input type="hidden" name="option_select3" value="XL Hoodie" />
+        <input type="hidden" name="option_amount3" value="40.00" />
+        <input type="hidden" name="option_select4" value="Small T-Shirt" />
+        <input type="hidden" name="option_amount4" value="20.00" />
+        <input type="hidden" name="option_select5" value="Medium T-Shirt" />
+        <input type="hidden" name="option_amount5" value="20.00" />
+        <input type="hidden" name="option_select6" value="Large T-Shirt" />
+        <input type="hidden" name="option_amount6" value="20.00" />
+        <input type="hidden" name="option_select7" value="XL T-Shirt" />
+        <input type="hidden" name="option_amount7" value="20.00" />
+        <input type="hidden" name="option_index" value="0" />
+        <input
+          type="image"
+          src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+          border="0"
+          name="submit"
+          alt="PayPal - The safer, easier way to pay online!"
+        />
+        <img
+          alt=""
+          border="0"
+          src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+          width="1"
+          height="1"
+        />
+      </form>
+    </section>
+
+    <!-- Order form end -->
+
+    <!-- Footer -->
+    <section class="services">
+      <div class="container grid-5 center">
+        <div>
+          <a href="../index.html">
+            <i class="fas fa-home fa-3x"></i>
+            <h3>Home</h3>
+          </a>
+          <p>Home Page</p>
+        </div>
+        <div>
+          <a href="../html/photo.html">
+            <i class="fas fa-film fa-3x"></i>
+            <h3>Photo Page</h3>
+          </a>
+          <p>Check out pictures from the latest action</p>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/user/Niallo17" target="blank">
+            <i class="fab fa-youtube fa-3x"></i>
+            <h3>Youtube</h3>
+          </a>
+          <p>Follow us on Youtube</p>
+        </div>
+
+        <div>
+          <a
+            href="https://www.facebook.com/profile.php?id=100000398466456"
+            target="blank"
+          >
+            <i class="fab fa-facebook fa-3x"></i>
+
+            <h3>Facebook</h3>
+          </a>
+          <p>Follow us on Facebook</p>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/niallgoesdrifting" target="blank">
+            <i class="fab fa-instagram fa-3x"></i>
+            <h3>Instagram</h3>
+          </a>
+          <p>Follow us on Instagram</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
